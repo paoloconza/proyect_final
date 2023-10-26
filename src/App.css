@@ -12,7 +12,7 @@
 }
 
 /* form*/
-.form ::div{
+.offcanvas-start{
     background-color: rgb(30, 33, 58);
 }
 
@@ -29,40 +29,57 @@
 /*panelDias*/
 
 .grupoDias{
-    margin-left: 10px;
+    margin-left: 10em;
 }
 
 .divDias{
     /* border: 1px solid rgb(30, 33, 58); */
     background-color: rgb(30, 33, 58);
     color: rgb(231, 231, 235);
-    width: 6rem;
-    height: 7rem;
+    width: 7rem;
+    height: 9rem;
     display: inline-block;
+    margin: 10px;
 }
 
 .divDias > p{
-    
-    padding:0.5em;
+    justify-content: center;
+    padding:1em;
 }
 /*panelDatos*/
 
 .grupoDatos {
     
-    justify-content: center;
+    
     align-items: center;
     background-color: rgb(30, 33, 58);
-    margin: 0 10px;
+    margin: 10px;
+    width: 15em;
+    display: flex;
    
    
 }
 
 .otrosDatos > p, h2 {
-    display: flex;
+    
     color: rgb(231, 231, 235);
     width: 15rem;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     padding: 10px;
+    margin: 10px;
 
+}
+
+/*botones */
+.grupoBtn{
+    justify-content: flex-end;
+}
+.btngrados{
+    border-radius: 50px;
+    
+}
+#btnGris{
+    background-color: rgb(88, 86, 118);
+    
 }
 

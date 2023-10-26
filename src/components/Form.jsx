@@ -12,7 +12,7 @@ const Form = ({ handleSubmit }) => {
                     </div >
 
                     <div className="offcanvas-body">
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit} className="custom-form">
                             <input type="text" placeholder="search location" />
                             <button type="submit">Search</button>
                         </form>

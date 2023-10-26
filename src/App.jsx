@@ -21,6 +21,7 @@ function App() {
   //--------------------------
   const [data, setData] = useState(datitos)
   const [city, setCity] = useState(null)
+
   /* para covertir de °k a °c y °f */
   const [conversionType, setConversionType] = useState('°K');
 
@@ -32,6 +33,7 @@ function App() {
     setConversionType('Fahrenheit');
   };
 //----------------------------
+
 /*traigo todo lo que necesito */
   useEffect(() => {
     ApiClima(city).then(data => {
@@ -56,7 +58,7 @@ function App() {
     setCity(e.target[0].value)
     console.log(e.target[0].value)
   }
-/*para el boton de localizacion */
+/* implemetar location */
   const acceso = (dato) => {
     const{lat, long} = dato.coords
     setLatitud(lat)
@@ -92,4 +94,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
