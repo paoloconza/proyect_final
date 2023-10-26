@@ -1,23 +1,23 @@
-// import { useState } from "react"
+import { useState } from "react"
 
-// const Form = ({ isOpen, toggleModal }) => {
-//     const [city, setCity] = useState("")
+const Form = ({ handleSubmit }) => {
 
-//     const onSubmit = (e) => {
-//         e.preventDefault();
-//         console.log({ city })
+    return (
+        <>
+            <div className="offcanvas offcanvas-start" data-bs-backdrop="static" tabIndex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                <div className="offcanvas-header">
 
-//         if (city === "" || !city) return;
-//     }
+                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div >
 
-//     return isOpen ? (
-//         <div className="Buscador" >
-//             <button onClick={toggleModal} >x</button>
-//             <form onSubmit={onSubmit}>
-//                 <input autoComplete="off" type="text" onChange={(e) => setCity(e.target.value)} placeholder="search location" />
-//                 <button id="btnBuscador" type="submit">Search</button>
-//             </form>
-//         </div>
-//     ):null
-// }
-// export default Form
+                <div className="offcanvas-body">
+                    <form onSubmit={handleSubmit}>
+                        <input type="text" placeholder="search location" />
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </> 
+    )
+}
+export default Form
