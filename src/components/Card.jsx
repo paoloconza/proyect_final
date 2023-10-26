@@ -1,6 +1,4 @@
 import React from 'react'
-import BtnConversor from './BtnConversor'
-import { useState } from 'react'
 
 const Card = ({ data, conversionType }) => {
 
@@ -26,20 +24,7 @@ const Card = ({ data, conversionType }) => {
     }
     const today = weekDay[day]
 
-    //------------------------
-
-    // const [kelvin, setKelvin] = useState(data.temp);
-    console.log (data.temp)
-    // const [conversionType, setConversionType] = useState('°K');
-  
-    // const convertToCelsius = () => {
-    //   setConversionType('Celsius');
-    // };
-  
-    // const convertToFahrenheit = () => {
-    //   setConversionType('Fahrenheit');
-    // };
-  
+  /*para covertir de °k a °c y °f*/
     const convertedValue = () => {
       if (conversionType === 'Celsius') {
         return (Math.round(data.temp - 273.15) + ' °C');

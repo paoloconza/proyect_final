@@ -8,7 +8,7 @@ import PanelDatos from './components/PanelDatos'
 import BtnConversor from './components/BtnConversor'
 
 function App() {
-
+/*para guardar todo lo que voy a necesitar */
   const datitos = {
     city: "",
     temp: "",
@@ -18,8 +18,10 @@ function App() {
     Visibility: "",
     Pressure: "",
   }
+  //--------------------------
   const [data, setData] = useState(datitos)
   const [city, setCity] = useState(null)
+  /* para covertir de °k a °c y °f */
   const [conversionType, setConversionType] = useState('°K');
 
   const convertToCelsius = () => {
@@ -29,8 +31,8 @@ function App() {
   const convertToFahrenheit = () => {
     setConversionType('Fahrenheit');
   };
-
-
+//----------------------------
+/*traigo todo lo que necesito */
   useEffect(() => {
     ApiClima(city).then(data => {
       console.log(data)
@@ -47,12 +49,27 @@ function App() {
     })
   }, [city])
 
+  //----------------------------
+
   const handleSubmit = (e) => {
     e.preventDefault()
     setCity(e.target[0].value)
     console.log(e.target[0].value)
   }
+/*para el boton de localizacion */
+  const acceso = (dato) => {
+    const{lat, long} = dato.coords
+    setLatitud(lat)
+    setLongitud(long)
+  }
 
+  const sinAcceso = () => {
+  }
+
+  const location = () => {
+    navigator.geolocation.getCurrentPosition(acceso, sinAcceso);
+  }
+//-----------------------------------
   return (
     <>
       <div className='divGeneral'>
