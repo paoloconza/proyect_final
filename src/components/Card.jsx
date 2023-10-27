@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({ data, conversionType }) => {
+const Card = ({ data, conversionType, current }) => {
 
     let imagen =
         data.img === 'Clear' ? 'Clear.png' :
