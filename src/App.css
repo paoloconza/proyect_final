@@ -2,37 +2,93 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
-.divGeneral{
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(14, 12, 25);
+    color: rgb(231, 231, 235);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.divGeneral {
     background-color: rgb(14, 12, 25);
     display: flex;
+    flex-direction: column;
 
 }
 
 /* form*/
-.offcanvas-start{
+.offcanvas-start {
     background-color: rgb(30, 33, 58);
+    color: rgb(231, 231, 235);
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.custom-form {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+}
+
+.custom-form input[type="text"],
+.custom-form button[type="submit"] {
+    padding: 10px;
+    margin: 5px;
+
+    border-radius: none;
+}
+
+.custom-form button[type="submit"] {
+    background-color: rgb(60, 71, 233);
+    border: none;
+    color: rgb(231, 231, 235);
+}
+
+.custom-form input[type="text"] {
+    background-color: rgb(30, 33, 58);
+    border: 1px solid rgb(231, 231, 235);
 }
 
 .imgDato {
     background-color: rgb(30, 33, 58);
     width: 400px;
     height: 37.7em;
-    justify-content: center;
+    align-items: center;
     padding: 20px;
     color: rgb(231, 231, 235);
+    display: flex;
+    flex-direction: column;
 }
+
+.btn.btn-secondary,
+.btn-get-location {
+    margin: 10px;
+}
+
 /*datos generales*/
 
 /*panelDias*/
 
-.grupoDias{
+.grupoDias {
     margin-left: 10em;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.divDias{
+.divDias {
     /* border: 1px solid rgb(30, 33, 58); */
     background-color: rgb(30, 33, 58);
     color: rgb(231, 231, 235);
@@ -42,26 +98,32 @@
     margin: 10px;
 }
 
-.divDias > p{
-    justify-content: center;
-    padding:1em;
+.divDias>p {
+    
+    background-color: rgb(30, 33, 58);
+  color: rgb(231, 231, 235);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
 }
+
 /*panelDatos*/
 
 .grupoDatos {
-    
-    
+
+
     align-items: center;
     background-color: rgb(30, 33, 58);
     margin: 10px;
     width: 15em;
     display: flex;
-   
-   
 }
 
-.otrosDatos > p, h2 {
-    
+.otrosDatos>p,
+h2 {
+
     color: rgb(231, 231, 235);
     width: 15rem;
     /* flex-wrap: wrap; */
@@ -71,15 +133,16 @@
 }
 
 /*botones */
-.grupoBtn{
+.grupoBtn {
     justify-content: flex-end;
 }
-.btngrados{
+
+.btngrados {
     border-radius: 50px;
-    
-}
-#btnGris{
-    background-color: rgb(88, 86, 118);
-    
+
 }
 
+#btnGris {
+    background-color: rgb(88, 86, 118);
+
+}
