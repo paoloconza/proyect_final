@@ -2,8 +2,7 @@ import React from 'react'
 
 const PanelDatos = ({data}) => {
     return (
-        <div>
-            <h2>Today's Hightlights</h2>
+        <>
             <div className='grupoDatos'>
                 <div className='otrosDatos'>
                     <p>Wind status</p>
@@ -22,7 +21,7 @@ const PanelDatos = ({data}) => {
                     <h2>{data.pressure}mb</h2>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

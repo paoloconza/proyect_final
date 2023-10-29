@@ -17,6 +17,10 @@ function App() {
     Humidity: "",
     Visibility: "",
     Pressure: "",
+    /* */
+    longi: "",
+    lati: "",
+    /* */
   }
   //--------------------------
   const [data, setData] = useState(datitos)
@@ -63,7 +67,11 @@ function App() {
         viento: data.wind.speed,
         humidity: data.main.humidity,
         visibility: data.visibility,
-        pressure: data.main.pressure
+        pressure: data.main.pressure,
+        /* */
+        longi: data.coord.lon,
+        lati: data.coord.lat,
+        /* */
       }))
     })
   }, [city])
@@ -96,18 +104,21 @@ function App() {
     <>
       <div className='divGeneral'>
         <div className='imgDato'>
-          <div>
-            <button className="btn btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
-              Search for places
-            </button>
-            <button onClick={location}><i class="fa-solid fa-location-crosshairs" style="color: #e7e7eb;"></i></button>
+            <div className='btnSearchLoc'>
+              <button className="btn btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                Search for places
+              </button>
+              <button className='btnlocation' onClick={location}>
+                <i className="fa-solid fa-location-crosshairs"></i>
+              </button>
+            </div>
             <Form handleSubmit={handleSubmit} />
-          </div>
           <Card data={data} conversionType={conversionType} />
         </div>
-        <div>
+        <div className='datitos'>
           <BtnConversor convertToCelsius={convertToCelsius} convertToFahrenheit={convertToFahrenheit} />
           <PanelDias />
+          <h2>Today's Hightlights</h2>
           <PanelDatos data={data} />
         </div>
       </div>
