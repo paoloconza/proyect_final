@@ -100,7 +100,7 @@ function App() {
             <button className="btn btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
               Search for places
             </button>
-            <button onClick={location}>get location </button>
+            <button onClick={location}><i class="fa-solid fa-location-crosshairs" style="color: #e7e7eb;"></i></button>
             <Form handleSubmit={handleSubmit} />
           </div>
           <Card data={data} conversionType={conversionType} />
