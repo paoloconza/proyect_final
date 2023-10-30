@@ -39,14 +39,14 @@ const Card = ({ data, conversionType, current }) => {
 
     return (
         <>
-            <div>
+            <div className='climaLugar'>
               
                 <img src={`./iconos/${imagen}`} alt="" />
              
                 <h1>{convertedValue()}</h1>
                 <h1>Shower</h1>
                 <p>Today . {today}</p>
-                <p>{data.city}</p>
+                <p><i className="fa-solid fa-location-dot"></i> {data.city}</p>
             </div>
         </>
     )
