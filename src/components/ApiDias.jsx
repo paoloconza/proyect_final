@@ -1,11 +1,15 @@
-// import React from 'react'
+import React from 'react'
 
-// const API_KEY = "622a6fa170aa8eb076333231456930d0"
+const API_KEY = "1aa62855b1e5400bd015025241df0a72"
 
-// const ApiClima = async (city) => {
 
-//     const data = await(await fetch(`api.openweathermap.org/data/2.5/forecast/daily?q=${city}&cnt={cnt}&appid=${API_KEY}`)).json()
-//     return data
-// }
+const ApiDias = async (city) => {
 
-// export default ApiClima
+    const datD = await(await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city || 'lima'}&appid=${API_KEY}`)).json()
+    
+    return datD
+
+    
+}
+
+export default ApiDias
